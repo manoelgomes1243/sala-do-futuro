@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Suporte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <h1>Plataforma Suporte</h1>
+        <p>Login, Admin, Notificações e Supabase Backend</p>
+      </div>
+      <button id="toggle-theme" class="btn btn-outline">Alternar Tema</button>
+    </div>
+    <div class="login-container">
+      <form id="login-form" class="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="input-wrapper">
+            <input type="email" id="email" placeholder="Digite seu email" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <div class="input-wrapper">
+            <input type="password" id="password" placeholder="Digite sua senha" required />
+          </div>
+        </div>
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="button" id="signup-btn" class="btn btn-secondary">Criar Conta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm" type="module"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
