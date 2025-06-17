@@ -1,9 +1,8 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-// Inicializa o Supabase
 const supabase = createClient(
-  'https://utcqxtsguerkkplqlvvm.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...substitua_com_a_sua_public_key...'
+  'https://raedcdrreigrbtuilbhx.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhZWRjZHJyZWlncmJ0dWlsYmh4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxNjg3NzMsImV4cCI6MjA2NTc0NDc3M30.m78xB8qTRRdtc1Qd1GU49ZJFrj7dyD7OdqonQ1mX7iY'
 );
 
 // LOGIN
@@ -20,7 +19,6 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     return;
   }
 
-  // Verifica se é admin
   const { data: isAdmin, error: adminError } = await supabase
     .from('admins')
     .select('*')
